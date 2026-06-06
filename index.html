@@ -80,6 +80,10 @@
   .reco{background:var(--amber-bg);border:1px solid var(--amber);border-radius:9px;padding:13px 14px;margin-top:8px;font-size:.93rem}
   .reco b{color:var(--amber)}
   .footer{color:var(--muted);font-size:.78rem;text-align:center;margin-top:30px}
+  .coffee{margin:26px auto 0;max-width:560px;text-align:center;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .coffee span{color:var(--muted);font-size:.9rem;line-height:1.4}
+  .coffeebtn{display:inline-block;text-decoration:none;font-weight:600;font-size:.95rem;padding:9px 22px;border-radius:10px;background:#f4b740;color:#1a1205;transition:transform .12s ease,filter .12s ease}
+  .coffeebtn:hover{filter:brightness(1.07);transform:translateY(-1px)}
   a{color:var(--accent)}
   .tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:#222c38;color:var(--muted);margin-left:6px}
 </style>
@@ -134,6 +138,7 @@
     <div class="card" id="resBody"></div>
   </div>
 
+  <div class="coffee"><span>Якщо тренажер виявився корисним — можна почастувати автора кавою ☕</span><a class="coffeebtn" href="https://send.monobank.ua/jar/93E59JrpBj" target="_blank" rel="noopener">Підтримати ☕</a></div>
   <div class="footer">Згенеровано для самопідготовки Григорія · працює офлайн · темна тема · подвійний клік відкриває файл</div>
 </div>
 
@@ -1606,6 +1611,9 @@ function finishTest(){
     `<button class="act primary" id="r_again">Пройти цей варіант ще раз</button>`+
     `<button class="act" id="r_next">Наступний варіант →</button>`+
     `<button class="act" id="r_home" style="margin-left:auto">На портал</button></div>`;
+
+  html+=`<div class="coffee"><span>Якщо тренажер допоміг підготуватись до атестації — можеш почастувати автора кавою ☕</span>`+
+    `<a class="coffeebtn" href="https://send.monobank.ua/jar/93E59JrpBj" target="_blank" rel="noopener">Підтримати ☕</a></div>`;
 
   el("resBody").innerHTML=html;
   el("r_again").onclick=()=>startVariant(s.variant, s.train);
