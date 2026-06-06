@@ -1,0 +1,6 @@
+# Тестові артефакти браузера (Playwright)
+.playwright-mcp/
+
+# Python кеш
+__pycache__/
+*.pyc
